@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 			response = response.concat('</body></html>');
 			fs.writeFile('Movies.html', response, (err) => {
 				if (err) throw err;
-				console.log('arquivo escrito okay');
 			});
 			res.end(response);
 		})
